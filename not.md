@@ -118,6 +118,34 @@ $ sudo apt install git
 repo oluşturma
       Hatırlatma: Kullanıcı adı seçerken Türkçe karakter kullanmayın.
       $ git init
-      Initialized empty Git repository in ~/djangogirls/.git/ 
+      Initialized empty Git repository in ~/djangogirls/.git/
       $ git config --global user.name "Adınız"
       $ git config --global user.email you@example.com
+
+Git bu dizindeki tüm dizin ve dosyalardaki değişiklikleri kaydedecek, ama takip etmemesini istediğimiz bazı dosyalar var. Bunu dizinin dibinde .gitignore adında bir dosya oluşturarak yapıyoruz. Editörünüzü açın ve aşağıdaki içeriklerle yeni bir dosya yaratın:
+
+.gitignore
+
+          *.pyc
+          *~
+          __pycache__
+          myvenv
+          db.sqlite3
+          /static
+          .DS_Store
+
+          Ve onu .gitignore ismi ile "djangogirls" dizinine kaydedin.
+
+          $ git status
+          $ git add --all .
+          $ git commit -m "Django Girls uygulamam, ilk commit"
+          $ git remote add origin https://github.com/<github-kullanıcı-adınız>/repoadi.git
+          $ git push -u origin master
+
+
+
+          PythonAnywhere command-line
+          $ pip3.6 install --user pythonanywhere
+          $ pa_autoconfigure_django.py https://github.com/<github-kullanıcı-adınız>/my-first-blog.git
+
+          (<kullanici-adiniz>.pythonanywhere.com) $ python manage.py createsuperuser
