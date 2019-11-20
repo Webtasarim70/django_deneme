@@ -24,6 +24,22 @@ https://tutorial.djangogirls.org/tr/django_start_project/
 - settings.py dosyası, web sitesinizin ayarlarını içerir.
 - urls.py dosyası urlresolver(urlçözümleyici) tarafından kullanılan kalıpların bir listesini içerir.
 
+#sublime text için eklenti
+  
+
+      try SublimeJEDI
+
+      step 1: ctrl+shift+p search - install package
+
+      step 2: Wait for few seconds until drop down box to appear
+
+      step 3: search Jedi - Python autocompletion and press enter
+
+      now auto completion for python will work in sublime..
+
+      Note: you can try Anaconda instead Jedi using same step.
+
+
 #django ayarları
 
 mysite/settings.py TIME_ZONE = 'Europe/Istanbul'
