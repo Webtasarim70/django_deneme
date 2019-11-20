@@ -130,16 +130,18 @@ Uygulamamızı oluşturduktan sonra, Django'ya bunu kullanmasını söylememiz l
 superkullanıcı oluşturma      
   
       python manage.py createsuperuser
-    #git ve github
-    $ sudo apt install git
 
 # git repo oluşturma
- 
+     $ sudo apt install git
+
    Hatırlatma: Kullanıcı adı seçerken Türkçe karakter kullanmayın.
-      $ git init
-      Initialized empty Git repository in ~/djangogirls/.git/
-      $ git config --global user.name "Adınız"
-      $ git config --global user.email you@example.com
+
+        $ git init
+        Initialized empty Git repository in ~/djangogirls/.git/
+
+        $ git config --global user.name "Adınız"
+        
+        $ git config --global user.email you@example.com
 
 Git bu dizindeki tüm dizin ve dosyalardaki değişiklikleri kaydedecek, ama takip etmemesini istediğimiz bazı dosyalar var. Bunu dizinin dibinde .gitignore adında bir dosya oluşturarak yapıyoruz. Editörünüzü açın ve aşağıdaki içeriklerle yeni bir dosya yaratın:
 
