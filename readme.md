@@ -48,25 +48,25 @@ https://tutorial.djangogirls.org/tr/django_start_project/
   STATIC_ROOT = os.path.join(BASE_DIR, 'static')
   ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
-#veritabanı kurulumu
+# veritabanı kurulumu
 
 varsayılan sqlite3 ayarlarda kurulu
 mysite/settings.py
 
-  DATABASES = {
-      'default': {
-          'ENGINE': 'django.db.backends.sqlite3',
-          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-      }
-   }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+     }
 
 python manage.py migrate
 
 # sunucuyu çalıştırma ve görme
-  (myvenv) ~/djangogirls$ python manage.py runserver
+    (myvenv) ~/djangogirls$ python manage.py runserver
   http://127.0.0.1:8000/
 
-#blog kurulumu
+# blog kurulumu
     
     python manage.py startapp blog
 
@@ -74,15 +74,15 @@ Uygulamamızı oluşturduktan sonra, Django'ya bunu kullanmasını söylememiz l
 
   mysite/settings.py
 
-  INSTALLED_APPS = [
-      'django.contrib.admin',
-      'django.contrib.auth',
-      'django.contrib.contenttypes',
-      'django.contrib.sessions',
-      'django.contrib.messages',
-      'django.contrib.staticfiles',
-      'blog',
-  ]
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'blog',
+    ]
 
 # model
 
@@ -113,7 +113,7 @@ Uygulamamızı oluşturduktan sonra, Django'ya bunu kullanmasını söylememiz l
 #modeller icin veritabanı tablo oluşturma
 
     python manage.py makemigrations blog
-  python manage.py migrate blog
+    python manage.py migrate blog
 
 # django admin
 
