@@ -190,7 +190,9 @@ Git bu dizindeki tüm dizin ve dosyalardaki değişiklikleri kaydedecek, ama tak
     komut satırı
 
     $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
-    $ git pull
+         (  cd $USER.pythonanywhere.com )
+
+        $ git pull
     [...]
 
     (Açı parantezleri olmadan <your-pythonanywhere-username>'i gerçek PythonAnywhere kullanıcı isminizle değiştirmeyi unutmayın).
