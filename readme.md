@@ -25,7 +25,7 @@ https://tutorial.djangogirls.org/tr/django_start_project/
 - urls.py dosyası urlresolver(urlçözümleyici) tarafından kullanılan kalıpların bir listesini içerir.
 
 # sublime text için eklenti
-  
+
 
       try SublimeJEDI
 
@@ -67,7 +67,7 @@ python manage.py migrate
   http://127.0.0.1:8000/
 
 # blog kurulumu
-    
+
     python manage.py startapp blog
 
 Uygulamamızı oluşturduktan sonra, Django'ya bunu kullanmasını söylememiz lazım. Bunu mysite/settings.py dosyasından yapacağız -- kod editörümüzde açalım. INSTALLED_APPS'ı bulup ] karakterinin üzerindeki satıra 'blog', yazmamız lazım. Sonuç aşağıdaki gibi görünmeli:
@@ -128,7 +128,7 @@ Uygulamamızı oluşturduktan sonra, Django'ya bunu kullanmasını söylememiz l
 
 
 superkullanıcı oluşturma      
-  
+
       python manage.py createsuperuser
 
 # git repo oluşturma
@@ -140,7 +140,7 @@ superkullanıcı oluşturma
         Initialized empty Git repository in ~/djangogirls/.git/
 
         $ git config --global user.name "Adınız"
-        
+
         $ git config --global user.email you@example.com
 
 Git bu dizindeki tüm dizin ve dosyalardaki değişiklikleri kaydedecek, ama takip etmemesini istediğimiz bazı dosyalar var. Bunu dizinin dibinde .gitignore adında bir dosya oluşturarak yapıyoruz. Editörünüzü açın ve aşağıdaki içeriklerle yeni bir dosya yaratın:
@@ -162,11 +162,35 @@ Git bu dizindeki tüm dizin ve dosyalardaki değişiklikleri kaydedecek, ama tak
           $ git commit -m "Django Girls uygulamam, ilk commit"
           $ git remote add origin https://github.com/<github-kullanıcı-adınız>/repoadi.git
           $ git push -u origin master
-          
+
 # pyton any where için kurulumu
           PythonAnywhere command-line
           $ pip3.6 install --user pythonanywhere
-          $ pa_autoconfigure_django.py https://github.com/<github-kullanıcı-adınız>/my-first-blog.git
+          $ pa_autpioconfigure_django.py https://github.com/<github-kullanıcı-adınız>/my-first-blog.git
 
           (<kullanici-adiniz>.pythonanywhere.com) $ python manage.py createsuperuser
 
+
+# düzeltmelerden sonra yayına tekrar alma
+
+>  Yayına alma zamanı!
+
+        Sitenizin hala PythonAnywhere'de çalışıp çalışmadığına bakmakta fayda var, değil mi? Yeniden taşımayı deneyelim.
+
+        komut satırı
+
+        $ git status
+        $ git add --all .
+        $ git status
+        $ git commit -m "Site için CSS ve ayrıntılı blog gönderisi için görünüm ve şablon eklendi."
+        $ git push
+
+ > Sonra bir PythonAnywhere Bash konsol una gidip:
+
+    komut satırı
+
+    $ cd ~/<your-pythonanywhere-username>.pythonanywhere.com
+    $ git pull
+    [...]
+
+    (Açı parantezleri olmadan <your-pythonanywhere-username>'i gerçek PythonAnywhere kullanıcı isminizle değiştirmeyi unutmayın).
